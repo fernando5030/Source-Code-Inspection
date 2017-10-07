@@ -21,4 +21,11 @@ public class PapelMoeda {
     public int getQuantidade() {
         return quantidade;
     }
+    public void setValor(int val){
+        this.valor = val;
+    }
+    public void setQuantidade(int qtde){
+        this.quantidade = qtde;
+    }
+    
 }
