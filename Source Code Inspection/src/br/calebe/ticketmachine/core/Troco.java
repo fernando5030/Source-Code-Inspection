@@ -51,15 +51,17 @@ class Troco {
     class TrocoIterator implements Iterator<PapelMoeda> {
 
         protected Troco troco;
+        protected int indice;
 
         public TrocoIterator(Troco troco) {
             this.troco = troco;
+            this.indice = 0;
         }
 
         @Override
         public boolean hasNext() {
-            for (int i = 6; i >= 0; i++) {
-                if (troco.papeisMoeda[i] != null) {
+            if(indice < papeisMoeda.length){
+                if (troco.papeisMoeda[indice] != null) {
                     return true;
                 }
             }
