@@ -13,11 +13,13 @@ public class TicketMachine {
 
     protected int valor;
     protected int saldo;
+    protected int valorTotal;
     protected int[] papelMoeda = {2, 5, 10, 20, 50, 100};
 
     public TicketMachine(int valor) {
         this.valor = valor;
         this.saldo = 0;
+        this.valorTotal = 0;
     }
 
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
@@ -49,6 +51,7 @@ public class TicketMachine {
         result += "*** R$ " + saldo + ",00 ****\n";
         result += "*****************\n";
         saldo -= valor;
+        valorTotal += valor;
         return result;
     }
 }
