@@ -25,7 +25,7 @@ public class PapelMoeda {
         this.valor = val;
     }
     public void setQuantidade(int qtde){
-        this.quantidade = qtde
+        this.quantidade = qtde;
     }
     
 }
