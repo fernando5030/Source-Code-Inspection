@@ -52,7 +52,7 @@ class Troco {
             count++;
         }
         valor -= count * 2;
-        papeisMoeda[1] = new PapelMoeda(2, count);
+        papeisMoeda[0] = new PapelMoeda(2, count);
     }
 
     public TrocoIterator getIterator() {
