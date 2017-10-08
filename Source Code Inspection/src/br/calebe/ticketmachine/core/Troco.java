@@ -36,11 +36,14 @@ class Troco {
             count++;
         }
         papeisMoeda[2] = new PapelMoeda(10, count);
+        
         count = 0;
-        while (valor % 5 != 0) {
+        while (valor % 5 != count) {
             count++;
         }
+        valor -= count * 5;
         papeisMoeda[1] = new PapelMoeda(5, count);
+        
         count = 0;
         while (valor % 2 != 0) {
             count++;
