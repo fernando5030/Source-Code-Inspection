@@ -13,15 +13,19 @@ class Troco {
     public Troco(int valor) {
         papeisMoeda = new PapelMoeda[6];
         int count = 0;
-        while (valor % 100 != 0) {
-            count++;
-        }
-        papeisMoeda[5] = new PapelMoeda(100, count);
+//        while (valor % 100 != count) {
+//            count++;
+//        }
+//        valor -= count * 100;
+//        papeisMoeda[6] = new PapelMoeda(100, count);
+        
         count = 0;
-        while (valor % 50 != 0) {
+        while (valor % 50 != count) {
             count++;
         }
-        papeisMoeda[4] = new PapelMoeda(50, count);
+        valor -= count * 50;
+        papeisMoeda[5] = new PapelMoeda(50, count);
+        
         count = 0;
         while (valor % 20 != 0) {
             count++;
