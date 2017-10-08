@@ -17,20 +17,22 @@ class Troco {
             count++;
         }
         valor -= count * 100;
-        papeisMoeda[6] = new PapelMoeda(100, count);
+        papeisMoeda[5] = new PapelMoeda(100, count);
         
         count = 0;
         while (valor % 50 != count) {
             count++;
         }
         valor -= count * 50;
-        papeisMoeda[5] = new PapelMoeda(50, count);
+        papeisMoeda[4] = new PapelMoeda(50, count);
         
         count = 0;
-        while (valor % 20 != 0) {
+        while (valor % 20 != count) {
             count++;
         }
+        valor -= count * 20;
         papeisMoeda[3] = new PapelMoeda(20, count);
+        
         count = 0;
         while (valor % 10 != 0) {
             count++;
